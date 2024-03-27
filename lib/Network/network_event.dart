@@ -1,9 +1,6 @@
 abstract class NetworkEvent {}
 
-class NetworkObserve extends NetworkEvent {}
-
-class NetworkNotify extends NetworkEvent {
+class NetworkObserveEvent extends NetworkEvent {
   final bool isConnected;
-
-  NetworkNotify({this.isConnected = false});
+  NetworkObserveEvent({this.isConnected = false});
 }
