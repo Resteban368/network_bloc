@@ -1,7 +1,9 @@
-import 'package:bloc_features/screens/splash_screen.dart';
+
 import 'package:go_router/go_router.dart';
 
-import '../../main.dart';
+import '/screens/home_screen.dart';
+import '/screens/splash_screen.dart';
+import '/screens/no_internet_connection_screen.dart';
 
 final appRouter = GoRouter(
   routes: [
@@ -12,6 +14,10 @@ final appRouter = GoRouter(
     GoRoute(
       path: '/home',
       builder: (context, state) => const HomeScreen(),
+    ),
+    GoRoute(
+      path: '/no-internet',
+      builder: (context, state) => const NoInternetConnectionScreen(),
     ),
   ],
 );
