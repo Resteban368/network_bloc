@@ -12,6 +12,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocListener<NetworkBloc, NetworkState>(
           listener: (context, state) {
+            print("NetworkBloc state 🛜: $state");
             if (state is NetworkFailureState) {
               context.push('/no-internet');
             }
